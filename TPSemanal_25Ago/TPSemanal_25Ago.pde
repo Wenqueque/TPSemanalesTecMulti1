@@ -2,7 +2,7 @@ int cant = 20 ;
 int tamX, tamY;
 int col1, fila1 = 0;
 int col2 = 19, fila2 = 19;
-int [][] misDatos = new int [cant][cant]; // entre los [] es la dimension del arreglo (en este caso cant, que son 10 en ambos), en cada una de las posiciones del primer arreglo van a haber dentro la cantidad de arreglos de la segunda dimension
+int [][] misDatos = new int [cant][cant];
 
 void setup() {
   size(500, 400);
@@ -10,7 +10,7 @@ void setup() {
   tamY = height/cant;
   for (int col=0; col < cant; col++) {
     for (int fila=0; fila < cant; fila++) {
-      misDatos[col][fila] = 0; //Si ponemos '= col*fila nos sale la tabla de multiplicación'
+      misDatos[col][fila] = 0; 
     }
   }
   for (int col=0; col < cant; col++) {
@@ -44,14 +44,10 @@ void draw() {
       } else {
         fill(200);
       }
-      rect(col*tamX, fila*tamY, tamX, tamY); //creó un for anidado para crear una grilla con líneas
-
+      rect(col*tamX, fila*tamY, tamX, tamY); 
+      
       noStroke();
-      //fill(0);
-      /*
-      textSize(10);
-       text(col + ":" + fila, col*tamX + tamX/2, fila*tamY + tamY - tamY/5);
-       */
+      
     }
   }
 }
